@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.sky{
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid black; */
+    /* border-bottom: 1px solid black; */
+    background: linear-gradient(rgb(196, 228, 253), white 60%, rgb(148, 190, 89));
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+}
+/* 云的样式 */
+.cloud{
+    width: 200px;
+    height: 200px;
+    /* border: 1px solid black; */
+    border-radius: 200px;
+    background: white;
+    position: absolute;
+}
+.cloud::before{
+    content: "";
+    display: block;
+    width: 200px;
+    height: 100px;
+    /* border: 1px solid black; */
+    background: white;
+    border-radius: 100px;
+    transform: translate(-105px, 62px) rotate(45deg);
+}
+.cloud::after{
+    content: "";
+    width: 400px;
+    height: 100px;
+    display: block;
+    /* border: 1px solid black; */
+    border-radius: 100px;
+    background: white;
+    transform: translate(-154px, -20px);
+}
+/* 云的位置 */
+.x1{
+    left: 60%;
+    top: 5%;
+    transform: scale(.5);
+}
+.x2{
+    left: 45%;
+    top: -6%;
+    transform: scale(.3);
+}
+.x3{
+    left: 48%;
+    top: 15%;
+    transform: scale(.3);
+}
+.x4{
+    left: 70%;
+    top: 15%;
+    transform: scale(.2);
+}
+.x5{
+    left: 86%;
+    top: -4%;
+    transform: scale(.3);
+}
+/* 兔子样式 */
+.sky img{
+    transform: scale(.16);
+    position: absolute;
+    left: 35%;
+    bottom: -75%;
+}
+/* 云的动画 */
+.x1{
+    animation: move 20s linear infinite;
+}
+.x2{
+    animation: move 18s linear infinite;
+}
+.x3{
+    animation: move 15s linear infinite;
+}
+.x4{
+    animation: move 10s linear infinite;
+}
+.x5{
+    animation: move 13s linear infinite;
+}
+@keyframes move{
+    0%{
+        left: 120%;
+        opacity: 1;
+    }
+    50%{
+        left: 50%;
+        opacity: .7;
+    }
+    100%{
+        left: -10%;
+        opacity: 1;
+    }
+}
+
+
